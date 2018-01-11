@@ -2,7 +2,7 @@
 -- version 4.1.14.8
 -- http://www.phpmyadmin.net
 --
--- Client :  db717619266.db.1and1.com
+-- Client :  xxxx
 -- Généré le :  Mar 09 Janvier 2018 à 10:50
 -- Version du serveur :  5.5.58-0+deb7u1-log
 -- Version de PHP :  5.4.45-0+deb7u11
