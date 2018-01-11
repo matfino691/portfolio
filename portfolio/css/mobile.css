@@ -1,0 +1,162 @@
+/********RESPONSIVE LAYOUT MOBILE************/
+@media all and (min-device-width: 641px){
+	.openBtn {
+		display: none!important;
+	}
+}
+@media all and (max-device-width: 640px){
+
+	html{
+		font-size: 2rem;
+	}
+	header .laptop{
+		display: none;
+	}
+	.sidebar{
+		position: absolute;
+    	top: 0;
+    	z-index: 1;
+	}
+	header #mobile-menu{
+		display: flex;
+	    justify-content: center;
+	    position: fixed;
+	    right: 0;
+	    background-color: #424554;
+	    height: 100%;
+	}
+	#mobile-menu li{
+		padding: 45px;
+    	display: flex;
+    	justify-content: center;
+	}
+	.openBtn{
+		color:#58127F;
+		display: block;
+		position: absolute;
+		top: 0;
+		right: 0;
+		box-sizing: border-box;
+		cursor: pointer;
+		background-color: rgba(0,0,0,0);
+		border: none;
+		outline: none;
+	}
+	.fa-bars, 
+	.fa-times {
+		color: white;
+		font-size: 2.3rem;
+
+	}
+	.closeBtn{
+		display: block;
+		position: absolute;
+		top: 0;
+		right: 0;
+		background-color: rgba(0,0,0,0);
+		box-sizing: border-box;
+		cursor: pointer;
+		border: none;
+		outline: none;
+	}
+	.sidebar a:before {
+	    bottom: -2px;
+	    
+	}
+}
+
+/********RESPONSIVE INDEX MOBILE************/
+@media all and (max-device-width: 640px){
+
+	#title{
+		transition: .5s;
+	    margin-top: 40vh;
+	    text-align: center;
+	}
+}
+/********RESPONSIVE PROJECT MOBILE************/
+@media all and (max-device-width: 640px){
+	
+	.bloc_image{
+	width: 65vh;
+	}
+}
+
+@media all and (max-device-width: 500px){
+	
+	.bloc_text a{
+	font-size: 1.2rem;
+	}
+	.bloc_image{
+	width: 45vh;
+	}
+	#commentaire{
+		width: 45vh;
+	}
+}
+@media all and (max-device-width: 320px){
+	
+	.bloc_text a{
+	font-size: 1rem;
+	}
+	.bloc_image{
+	width: 25vh;
+	}
+	#commentaire{
+		width: 25vh;
+		word-wrap: break-word;
+	}
+}
+
+/********RESPONSIVE ABOUT MOBILE************/
+@media all and (max-device-width: 640px){
+	
+	iframe, 
+	.skills{
+		display: none;
+	}
+}
+
+/********RESPONSIVE CONTACT MOBILE************/
+
+@media all and (max-device-width: 640px){
+	
+	input, 
+	textarea, 
+	.success, 
+	.error{
+		width: 62vh;
+	}
+
+	form {   
+    	margin-bottom: 30px
+	}
+}
+@media all and (max-device-width: 500px){
+	
+	form input, 
+	form textarea, 
+	.success, 
+	.error{
+		width: 45vh;
+	}
+
+	fieldset{
+		width: auto;
+	}
+
+	legend{
+		display: none;
+	}
+}
+
+@media all and (max-device-width: 320px){
+	
+	form input, 
+	form textarea, 
+	.success, 
+	.error{
+		width: 25vh;
+	}
+}
+

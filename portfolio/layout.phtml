@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <title>My Portfolio</title>
+    <!-- favicon -->
+    <link rel="shortcut icon" href="images/favicon.ico" />
+    <!-- CDN fontawesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- googlefonts -->
+    <link href="https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed|Hammersmith+One" rel="stylesheet">
+    <!-- normalize.css -->
+    <link rel="stylesheet" href="css/normalize.min.css">
+    <!-- reset.css -->
+    <link rel="stylesheet" href="css/reset.min.css">
+    <!-- Feuilles de style du canvas-->
+    <link rel="stylesheet" href="css/round.css">
+    <!-- Feuilles de style de l'application -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Feuilles des animations de l'application -->
+    <link rel="stylesheet" href="css/animations.css">
+     <!-- Feuilles de style responsive de l'application -->
+    <link rel="stylesheet" href="css/mobile.css">
+</head>
+
+<body>
+    <!-- En-tête commune du site -->
+    <header>
+        <!-- header pour laptop -->
+        <div class="laptop">
+            <div>
+                <a href="index.php"><img src="images/logo.png" class="logo" alt="logo du portfolio"></a>
+            </div>
+            <nav>
+                <ul> 
+                    <li><a href="index.php">Home</a></li>
+                    <li><a href="projects.php">Projects</a></li>
+                    <li><a href="about.php">About</a></li>
+                    <li><a href="contact.php">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <!-- header pour mobile -->
+        <button class="openBtn">
+            <i class="fa fa-bars" aria-hidden="true"></i>
+        </button>
+        <div class="sidebar">
+            <nav id="mobile-menu">
+                <ul>
+                    <li><button class="closeBtn"><i class="fa fa-times" aria-hidden="true"></i></button></li>
+                    <li><a href="index.php">Home</a></li>  
+                    <li><a href="projects.php">Projects</a></li>
+                    <li><a href="about.php">About</a></li>
+                    <li><a href="contact.php">Contact</a></li>
+                    </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Chargement du template PHTML spécifié par le programme PHP -->
+        <?php include 'views/' .$template.'.phtml' ?>
+    </main>
+    <footer>
+        <nav id="social">
+            <ul>
+            <!-- affichage des liens sociaux via un foreach dans le tableau associatif correspondant -->
+            <?php foreach ($socials as $row) :?>
+                <li>
+           <!-- htmlspecialchars -->
+                    <a href="<?=  htmlspecialchars($row['Adress'])?>">
+                    <i class="<?=  htmlspecialchars($row['Icon'])?>" aria-hidden="true"></i></a>
+                </li>
+            <?php endforeach ;?>
+            </ul>
+        </nav>
+        <p>Made by Mathieu Finocchiaro. <?= date('Y') ?></p>
+    </footer>
+<!-- CDN typed.js -->
+<script src="https://cdn.rawgit.com/mattboldt/typed.js/master/lib/typed.min.js"></script>
+<!-- CDN jquery-->
+<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+<!--scripts du canvas-->
+<script src="js/canvas.js"></script>
+<!--script de l'application-->
+<script src="js/main.js"></script>
+</body>
+</html>

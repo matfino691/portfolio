@@ -1,0 +1,105 @@
+/****************GLOBAL ANIMATIONS****************/
+strong:hover{
+	text-decoration: underline;
+	-webkit-transition: all 0.2s ease-in-out 0s;
+  transition: all 0.2s ease-in-out 0s;
+}
+#social i:hover{
+	color: #34DAEB;
+	-moz-transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  -o-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+  -webkit-transition: all 0.2s ease-in-out 0s;
+  transition: all 0.2s ease-in-out 0s;
+}
+#scrollTop:hover i{
+	color: #34DAEB;
+	-webkit-animation-name: slideInUp;
+  animation-name: slideInUp;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+@-webkit-keyframes slideInUp {
+  0% {
+  -webkit-transform: translateY(80%);
+  transform: translateY(80%);
+  visibility: visible;
+  }
+  50% {
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+  }
+  }
+  @keyframes slideInUp {
+  0% {
+  -webkit-transform: translateY(80%);
+  transform: translateY(80%);
+  visibility: visible;
+  }
+  50% {
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+  }
+  }
+
+/**************LAYOUT ANIMATIONS*****************/
+header nav a:hover:before {
+  visibility: visible;
+  -moz-transform: scale(1);
+  -o-transform: scale(1);
+  -ms-transform: scale(1);
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+  -webkit-transition: all 0.2s ease-in-out 0s;
+  transition: all 0.2s ease-in-out 0s;
+}
+.logo:hover{
+	border-radius: 0; 
+	background: rgba(255, 255, 255, 0.0);
+	-moz-transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  -o-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+  -webkit-transition: all 0.2s ease-in-out 0s;
+  transition: all 0.2s ease-in-out 0s;        
+}
+
+/******LAYOUT MOBILE ANIMATIONS**********/
+.sidebar a:hover:before{
+text-decoration: underline;
+-moz-transform: scale(1);
+-webkit-transform: scale(1);
+-o-transform: scale(1);
+-ms-transform: scale(1);
+transform: scale(1); 
+-webkit-transition: all 0.2s ease-in-out 0s;
+transition: all 0.2s ease-in-out 0s;   
+}
+	
+/******************PROJECT ANIMATIONS********************/
+.bloc_text h3:hover a {
+	color: #34DAEB;
+	text-decoration: underline;
+  -webkit-transition: all 0.2s ease-in-out 0s;
+  transition: all 0.2s ease-in-out 0s;
+}
+
+/******************CONTACT ANIMATIONS********************/
+form input:focus, 
+form textarea:focus{
+	background: rgba(0, 0, 0, 0.2);
+	color: white;
+	-webkit-transition: all 0.2s ease-in-out 0s;
+  transition: all 0.2s ease-in-out 0s;
+}
+input[type='submit']:hover{
+	background: rgba(0, 0, 0, 0.2);
+  color: white;
+  -webkit-transition: all 0.2s ease-in-out 0s;
+  transition: all 0.2s ease-in-out 0s;
+}

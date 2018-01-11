@@ -1,0 +1,100 @@
+*
+{
+    box-sizing: border-box;
+    overflow: hidden;
+}
+body{
+    background-color: #EBEEF1;
+}
+.container{
+    width: 95%;
+    margin: 0 auto;
+    margin-top: 15px;
+}
+h1{
+    color: black;
+    font-size: 2.5em;
+    text-align: center;
+    height: 65px;
+    padding: 7px;
+    font-family: 'Permanent Marker';
+
+}
+p{
+    color: black;
+    font-size: 2em;
+    font-family: 'Yanone Kaffeesatz';
+
+}
+#tools{
+    border: 1px solid #2B343B;
+    border-radius: 10px;
+    background: #B8BBBD;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+}
+.painter{
+    float: right;
+}
+.refresh{
+    background-color: white;
+}
+#ardoise{
+    border: 1px solid #2B343B;
+    background-color: white;
+    border-radius: 10px;
+}
+#palette{
+   margin-top: 15px;
+    -webkit-box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.75);
+}
+.parametre{
+    margin: 7px;
+    display: flex;
+    align-items: center;
+    padding-bottom: 61px;
+
+}
+.parametre:last-child{
+    padding-bottom: 0;
+}
+button{
+    margin: 10px;
+    padding: 5px;
+    background-color: white;
+    border: 1px solid grey;
+    border-radius: 2px;
+}
+span{
+    margin: 10px;
+    padding: 5px;
+}
+.rapidColor{
+    border-radius: 25px;
+    padding: 15px;
+    border: none;
+}
+#black{
+    background-color: black;
+}
+#brown{
+    background-color: brown;
+}
+#red{
+    background-color: red;
+}
+#yellow{
+    background-color: yellow;
+}
+#green{
+    background-color: green;
+}
+#skyblue{
+    background-color: skyblue;
+}
+#blue{
+    background-color: blue;
+}

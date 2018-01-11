@@ -1,0 +1,50 @@
+<div class="container">
+<section id="contact">
+	<h1><strong>Contact</strong> me</h1>
+	<form action="contact.php" method="post">
+		<fieldset>
+			<legend>If you have a project, or just want to say hi and drink a ristretto, please don't hesitate to contact me using the form below:</legend>
+			<ul>
+				<!-- instanciation de l'objet form contenant les inputs  -->
+				<?php 
+
+				 	// si des données sont saisies , les garder affichées en cas d'erreur, sinon cases vides
+					$form = new Form(isset($_SESSION['inputs']) ? $_SESSION['inputs'] : [] );
+				
+					// affichage de l'erreur
+					if (array_key_exists('error', $_SESSION)): ?>
+					
+					<li class="error"><?= implode('<li>', $_SESSION['error'] ); ?></li>
+				
+				<?php endif ; ?>
+				
+				<!-- affichage du succès de l'envoi -->
+				<?php if (array_key_exists('success', $_SESSION)): ?>
+					
+					<li class="success">
+						<i class="fa fa-check" aria-hidden="true"></i>
+						Your email is sent successfully
+					</li>
+				
+				<?php endif ; ?>
+
+				<!-- champs du formulaire via l'objet form et ses methode specifique -->
+				<li>
+					<?= $form->email('email', 'Email') ; ?>
+				</li>
+				<li>
+					<?= $form->text('name', 'Name') ; ?>
+				</li>
+				<li>
+					<?= $form->textarea('message', 'Message') ; ?>
+				</li>
+				<input type="submit" name="send" value="Send">
+			</ul>
+		</fieldset>
+	</form>
+</section>
+</div>
+
+<?php 
+	destroySession();
+ ?>

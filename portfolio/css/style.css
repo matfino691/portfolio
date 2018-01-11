@@ -1,0 +1,354 @@
+/****************GLOBAL****************/
+*{
+    -webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	outline: none;	 
+}
+html{
+	height: 100%;
+}
+body{
+	font-family: 'Barlow Semi Condensed', sans-serif;
+	font-size: 62.5%;
+	background: #00c6d0; /* Old browsers */
+	background: -moz-linear-gradient(-45deg, #00c6d0 0%, #199dc3 28%, #3a64b2 61%, #750595 100%); 
+	background: -webkit-linear-gradient(-45deg, #00c6d0 0%,#199dc3 28%,#3a64b2 61%,#750595 100%); 
+	background: linear-gradient(135deg, #00c6d0 0%,#199dc3 28%,#3a64b2 61%,#750595 100%);
+	background-attachment: fixed;
+	color: white; 	
+}
+main{
+	margin: 30px 0 30px;
+}
+.container{
+	width: 90%;
+	margin: 0 auto;
+}
+footer{
+	background-color: rgba(0,0,0,0.2);
+	padding: 15px;
+	width: 100%;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+}
+h1{
+	font-size: 2rem;
+	text-align: center;
+}
+h2{
+	font-size: 1.7rem;
+}
+p, a{
+	font-size: 1.1rem;
+	color: white;
+}
+a{
+	text-decoration: none;
+}
+a.anchor{
+	font-size: 2rem;
+	cursor: default;
+}
+footer p{
+	font-size: 0.8rem;
+}
+#social ul{
+	width: 50%;
+	margin: 0 auto;
+	padding-bottom: 15px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+#social i{
+	font-size: 1.6rem;
+}
+strong{
+	color: #34DAEB;
+	font-weight: bold;
+	cursor: pointer;
+}
+.active{
+	text-decoration: line-through;
+}
+
+/**************LAYOUT*****************/
+.sidebar, 
+.openBtn, 
+.closeBtn, 
+#mobile-menu{
+	display: none;
+}
+header .laptop{
+	background-color: rgba(0,0,0,0.2);
+	display: flex;
+	padding: 30px;
+	justify-content: space-between;
+}
+.logo{
+	width: 50px;
+	border-radius: 80px; 
+	background: rgb(255, 255, 255);
+}
+.laptop nav{
+	display: flex;
+    align-items: center;
+}
+.laptop ul{
+	display: flex;
+}
+.laptop li{
+	padding-left: 40px;
+	font-size: 1.3rem;
+}
+header nav a{
+	position: relative;
+	font-size: 1.3rem;
+}
+header nav a:before {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 2px;
+	bottom: 0;
+	left: 0;
+	background-color: white;
+	visibility: hidden;
+	-webkit-transform: scaleX(0);
+	transform: scaleX(0);
+	-webkit-transition: all 0.3s ease-in-out 0s;
+	transition: all 0.3s ease-in-out 0s;
+}
+
+/******************INDEX********************/
+#title{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+    margin-top: 28vh;
+	color: white;
+	transition: .5s;
+}
+#title h1, 
+#title h2, 
+.type{
+	cursor: pointer;
+}
+.type{
+	font-size: 2rem;
+	cursor: pointer;
+    font-weight: bold;
+}
+
+/******************PROJECT********************/
+#projects{
+	text-align: center;
+}
+#projects article, #projects h2{
+	margin: 15px 0 15px;
+}
+#projects img{
+	width: 100%;
+	border-radius: 10px;
+	-webkit-box-shadow: 1px 2px 10px 0 rgba(0,0,0,1);
+	box-shadow: 1px 2px 10px 0 rgba(0,0,0,1);
+}
+.bloc_image{
+	position: relative;
+	width: 75%;
+    margin: 0 auto;
+}
+.bloc_text{
+	border-radius: 10px;
+	height: 0;
+	padding-top: 0;
+	bottom: 0;
+	margin-left: 0;
+    margin-top: -215px;
+    overflow: hidden;
+    padding: 0 5px;
+    position: absolute;
+    width: 100%;
+	background: rgba(0,0,0,0.7);
+}
+.bloc_text a{
+	font-size: 2.2rem;
+}
+#form_comment{
+	padding: 15px 0 15px;
+}
+#commentaire{
+    background: rgba(255,255,255,0.1);
+    border-radius: 4px;
+    width: 40em;
+    margin: 20px auto 20px;
+    line-height: 1.3;
+    padding: 10px;
+}
+#commentaire article{
+	border-bottom: 1px solid blue;
+    width: 100%;
+    padding: 5px 0 5px;
+}
+.auteur{
+	font-weight: bold;
+    font-size: 1.3rem;
+}
+.comment{
+	font-size: 1.3rem;
+	font-style: italic;
+	padding: 10px;
+}
+.time{
+	font-size: 0.8rem;
+}
+
+/******************ABOUT********************/
+#me, 
+#sound, 
+#skills{
+    text-align: justify;
+    line-height: 1.6;
+    padding: 15px 0 15px;
+}
+#about h1, 
+#skills h1{
+	text-align: center;
+}
+#about p{
+    padding: 5px 0 5px;
+}
+#sound{
+	color: #424554 ;
+	text-align: center;
+	background: #f5f5f5;
+}
+#sound iframe{
+	padding-top: 20px;
+	display: none;
+}
+#sound .kword{
+	color:#34DAEB; 
+}
+.skills{
+	display: none;
+}
+#skills h2{
+	text-align: center;
+	padding: 20px;
+}
+#skills ul{
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+#skills ul li{
+	font-size: 1.8rem;
+	text-align: center;
+}
+div.round{
+	margin-bottom: 15px;
+	width: 200px;
+	height: 200px;
+	position: relative;
+}
+div.round input{
+	position: absolute;
+	top: 75px;
+	left: 50px;
+	font-size: 40px;
+	color: white;
+	text-align: center;
+	width: 100px;
+	border: none;
+	background: none;
+	outline:none;
+}
+div.round canvas{
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+.scrollTop{
+	display: flex;
+    justify-content: center;
+}
+#scrollTop i{
+	color: white;
+    font-size: 2rem;
+}
+
+/******************CONTACT********************/
+#contact{
+	text-align: justify;
+    line-height: 1.5;
+}
+#contact h1{
+	text-align: center;
+}
+form{
+	font-size: 1.1rem;
+	flex-direction: column;
+    display: flex;
+    align-items: center;
+}
+fieldset{
+	width: 20em;
+}
+legend{
+	padding: 15px 0 15px 0;
+}
+form input, 
+form textarea{
+	margin-top: 5px;
+    padding: 10px;
+    border: none;
+  	border-radius: 3px;
+    /*transition: background-color 0.33s;*/
+    width: 25em;
+    font-size: 16px;
+    color: black;
+    cursor: pointer;
+}
+form li{
+	padding-bottom: 10px;
+}
+form ul li label{
+    display: inline-block;
+    cursor: pointer;
+}
+form ul li label.textarea{
+    vertical-align: top;
+}
+form ul li label:not(.no-width){
+    width: 100px;
+}
+form textarea{
+    resize: none;
+}
+input[type='submit']{
+	background: white;
+	color:#3F318E;
+}
+.error{
+	background: #f2b5b5;
+    padding: 5px;
+    text-align: center;
+    border-radius: 3px;
+    font-size: 1.2rem;
+    color: #8e3737;
+    margin: 8px 0 8px;
+}
+.success{
+	background: #8cdb96;
+    padding: 5px;
+    text-align: center;
+    border-radius: 3px;
+    font-size: 1.2rem;
+    color: #1c8e3b;
+    margin: 8px 0 8px;
+}

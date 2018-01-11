@@ -1,0 +1,61 @@
+<div class="container">
+<section id="projects">
+		<h1><a href="#" class="anchor">My <strong>Works</strong></a></h1>
+
+		    <!-- affichage des projets via un foreach dans le tableau associatif correspondant -->
+			<?php foreach ($projects as $row) : ?>
+			<article>			
+				<div class="bloc_image">
+					<!-- htmlspecialchars -->
+					<img src="images/<?=  htmlspecialchars($row['Image'])?>" alt="<?=  htmlspecialchars($row['Image_Desc'])?>" class="screenShot">
+					
+					<div class="bloc_text">
+						<h3><a href="<?=  htmlspecialchars($row['Link'])?>"><?=  htmlspecialchars($row['Link_Desc'])?></a></h3>
+					</div>
+
+				</div>
+			</article>
+		<?php endforeach ;?>
+</section>
+
+<aside>
+	<h1>You can post a <strong>comment</strong> below</h1>
+	<form action="../models/add_comment.php" method="POST" id="form_comment">
+	  	<fieldset>
+		    <ul>
+			    <li>
+			    <label>Pseudo
+			    <input type="text" name="pseudo" id=""> 
+			    </label>
+			    </li>
+
+			    <li>	
+		    	<label>Comment
+		    	<textarea rows="5" name="comm" id=""></textarea>  
+		    	</label>
+			    </li>
+
+			    <li class="button">	
+		    	<input type="submit" class="btn" name="save" value="Add comment">
+			    </li>
+		  	</ul>
+	  	</fieldset>
+	</form>
+
+	<article id="commentaire">	
+	<?php foreach ($comments as $row) :?>
+		<ul>
+			<li class ="auteur"><?=  htmlspecialchars($row['Nickname']) ?> <i class="fa fa-comment-o" aria-hidden="true"></i></li>
+
+			<li class ="comment"><?=  htmlspecialchars(wordwrap($row['Contents'],26, "\n", true)) ?></li>
+			
+			<li class ="time"><?=  htmlspecialchars($row['CreationTimeStamp']) ?></li>
+		</ul>
+	<?php endforeach ?>
+	</article>
+</aside>
+</div>
+
+<div class="scrollTop">
+	<a href="#" id="scrollTop"><i class="fa fa-long-arrow-up" aria-hidden="true"></i></a>
+</div>

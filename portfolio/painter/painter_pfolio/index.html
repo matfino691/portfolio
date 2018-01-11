@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker|Yanone+Kaffeesatz" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+
+    <!-- Fonctions utilitaires -->
+    <script src="js/utilities.js"></script>
+</head>
+<body>
+
+    <header>
+        <h1>Painter</h1>
+    </header>
+
+    <main>
+
+    <div class= "container">
+    <section id="tools">
+        <div class="parametre">
+        <p>Outils</p>
+            <button class="effacer" data-background="#FFF"><i class="fa fa-eraser" aria-hidden="true"></i></button>
+            <button id="gradientChoice" data-action="choix"><i class="fa fa-eyedropper" aria-hidden="true"></i></button>
+        </div>
+
+        <div class="parametre">
+        <p>Couleur</p>
+            <span class="rapidColor" id="black" data-couleur="black"></span>
+            <span class="rapidColor" id="brown" data-couleur="brown"></span>
+            <span class="rapidColor" id="red" data-couleur="red"></span>
+            <span class="rapidColor" id="yellow" data-couleur="yellow"></span>
+            <span class="rapidColor" id="green" data-couleur="green"></span>
+            <span class="rapidColor" id="skyblue" data-couleur="skyblue"></span>
+            <span class="rapidColor" id="blue" data-couleur="blue"></span>    
+        </div>
+
+        <div class="parametre"><canvas id="palette" width="150" height="150"></canvas></div>
+
+        <div class="parametre">
+        <p>Epaisseur</p>
+            <button class="epaisseur"  data-width='1' >Fin</button>
+            <button class="epaisseur"  data-width='5'>Normal</button>
+            <button class="epaisseur"  data-width='10'>Epais</button>
+        </div>
+    </section>
+
+    <section class="painter">
+        <canvas id="ardoise" width="800" height="550"></canvas>
+    </section>  
+    
+    </main>
+    </div>
+</body>
+    <!-- Code principal du canvas -->
+    <script src="js/main.js"></script>
+</body>
+</html>
